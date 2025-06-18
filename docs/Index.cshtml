@@ -1,0 +1,140 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Social Media Links";
+}
+
+@section Styles {
+    <style>
+        body {
+            background: #d50000;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative; 
+        }
+
+        
+        .logo-left {
+            position: absolute;
+            top: 1rem;
+            left: 20%;
+            transform: translateX(-50%);
+            max-width: 250px;
+            height: auto;
+        }
+
+        
+        .logo-right {
+            position: absolute;
+            top: 4rem;
+            left: 85%;
+            transform: translateX(-50%);
+            max-width: 275px;
+            height: auto;
+        }
+
+        .container {
+            background: white;
+            padding: 2.5rem 2rem 2rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 32px rgba(60, 60, 100, 0.15);
+            text-align: center;
+            max-width: 430px;
+            width: 100%;
+        }
+
+        .campaign-img {
+            width: 90%;
+            max-width: 350px;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(213, 0, 0, 0.12);
+        }
+
+        h1 {
+            color: #b71c1c;
+            margin-bottom: 1.2rem;
+            font-size: 2.1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 1.1rem 0;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.15rem;
+            color: #fff;
+            background: #d50000;
+            padding: 0.75rem 2.2rem;
+            border-radius: 30px;
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(100,100,120,0.08);
+            transition: background 0.23s, color 0.23s;
+        }
+
+            a:hover {
+                background: #fff;
+                color: #d50000;
+                border: 2px solid #d50000;
+            }
+
+        @@media (max-width: 520px) {
+            .container {
+                padding: 1.2rem 0.3rem;
+            }
+
+            .campaign-img {
+                max-width: 98vw;
+            }
+            
+            .logo-left, .logo-right {
+                top: 0.5rem;
+                max-width: 60px;
+            }
+        }
+    </style>
+}
+
+
+<img src="~/images/logo PLH 2.png" alt="PLH Logo" class="logo-left" />
+
+
+<img src="~/images/SalvadorNasralla logo.png" alt="Salvador Nasralla log" class="logo-right" />
+
+<div class="container">
+    <img src="~/images/frase tio Mon.jfif"
+         alt="Vamos con MON"
+         class="campaign-img" />
+
+    <h1>Follow Mon Miranda!</h1>
+
+    <ul>
+        <li>
+            <a asp-page="./Index" asp-route-platform="instagram">
+                Instagram
+            </a>
+        </li>
+        <li>
+            <a asp-page="./Index" asp-route-platform="facebook">
+                Facebook
+            </a>
+        </li>
+        <li>
+            <a asp-page="./Index" asp-route-platform="tiktok">
+                TikTok
+            </a>
+        </li>
+    </ul>
+</div>
